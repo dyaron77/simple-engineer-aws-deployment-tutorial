@@ -3,6 +3,6 @@ services:
   deployment:
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports:
       - '80:80'

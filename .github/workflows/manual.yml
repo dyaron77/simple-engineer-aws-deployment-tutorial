@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@main
         
       - name: Generate Deployment Package
-        run: zip -r deploy.zip * -x "**node_modules**"
+        run: zip -r deploy1.zip * -x "**node_modules**"
         
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v18
@@ -22,4 +22,4 @@ jobs:
           environment_name: Simpleengineerdeploymenttutorial-env
           version_label: ${{ github.sha }}
           region: us-east-1
-          deployment_package: deploy.zip
+          deployment_package: deploy1.zip
